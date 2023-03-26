@@ -1,3 +1,10 @@
+/* variables */
+:root {
+	--red: #e63946;
+	--dark-blue: #1d3557;
+}
+
+
 /* Box-sizing fix */
 html {
 	box-sizing: border-box;
@@ -7,15 +14,31 @@ html {
 	box-sizing: inherit;
 }
 
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#logo {
+	font-size: 6vw;
+	text-align: center;
+}
+
+#header-bg {
+	width: 100%;
+	color: white;
+	background-color: var(--red);
+}
+
 header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-}
-
-#logo {
-	font-size: 6vw;
+	margin: 0 auto;
+	padding: 1.5em 1.5em;
+	max-width: 1200px;
 }
 
 nav {
@@ -30,9 +53,18 @@ ul {
 	justify-content: space-between;
 }
 
+nav > ul > li {
+	font-size: 3vw;
+	margin: 0 0.5em;
+}
+
 @media screen and (min-width: 700px) {
 	#logo {
 		font-size: 3em;
 	}
-}
 
+	nav > ul > li {
+		font-size: 1.5em;
+		margin: 0 0.5em;
+	}
+}
