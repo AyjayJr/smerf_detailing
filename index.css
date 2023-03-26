@@ -26,6 +26,12 @@ html, body {
 	font-family: 'Open sans', sans-serif;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
 /* header styles */
 
 #logo {
@@ -33,8 +39,21 @@ html, body {
 	text-align: center;
 }
 
+#logo:not(span) {
+	font-weight: bold;
+}
+
 #logo > span {
 	color: white;
+	text-shadow:
+		0.05em 0 black,
+		0 0.05em black,
+		-0.05em 0 black,
+		0 -0.05em black,
+		-0.05em -0.05em black,
+		-0.05em 0.05em black,
+		0.05em -0.05em black,
+		0.05em 0.05em black;
 }
 
 #header-bg {
@@ -63,38 +82,57 @@ ul {
 
 nav > ul > li {
 	font-size: 2.5vw;
+	font-weight: bold;
 	margin: 0 0.5em;
 }
 
 /* showcase content */
 
 #showcase {
-	height: 300px;
-	overflow: hidden;
+	background-image: url("./img/neelabh-raj-rS9PBJBY5pc-unsplash-small.jpg");
+	background-position: center 30%;
+	height: 600px;
+	flex-grow: 1;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 #showcase > img {
 	max-width: 100%;
 	margin: -75px 0;
 	z-index: -1000;
-	overflow: hidden;
 }
 
-#showcase > div {
-	top: 10%;
-	width: 100%;
-	text-align: center;
-	font-size: 8vw;
-	position: absolute;
-	color: white;
-}
-
-#showcase > div > h1 {
+#showcase > h1 {
+	font-size: 4em;
 	margin-bottom: 0; 
+	text-shadow:
+			0.05em 0 black,
+			0 0.05em black,
+			-0.05em 0 black,
+			0 -0.05em black,
+			-0.05em -0.05em black,
+			-0.05em 0.05em black,
+			0.05em -0.05em black,
+			0.05em 0.05em black;
 }
 
-#showcase > div > p {
-	font-size: 4vw;
+#showcase > p {
+	text-align: center;
+	font-size: 2em;
+	text-shadow:
+			0.05em 0 black,
+			0 0.05em black,
+			-0.05em 0 black,
+			0 -0.05em black,
+			-0.05em -0.05em black,
+			-0.05em 0.05em black,
+			0.05em -0.05em black,
+			0.05em 0.05em black;
 }
 
 /* main content */
@@ -102,27 +140,38 @@ nav > ul > li {
 content {
 	display: flex;
 	flex-direction: column;
-	height: 58%;
+	height: 100%;
+	width: 100%;
 }
 
 content > #a {
-	flex-grow: 1;
+	flex-grow: 0.5;
 	background-color: var(--light-blue);
 }
 
 content > #b {
-	flex-grow: 1;
+	flex-grow: 0.5;
 	background-color: var(--medium-blue);
 }
 
 content > #c {
-	flex-grow: 1;
+	flex-grow: 0.5;
 	background-color: var(--dark-blue);
 }
 
 
 /* responsive layout */
-@media screen and (min-width: 800px) {
+
+@media screen and (min-width: 630px) {
+	#showcase {
+		background-image: url("/img/neelabh-raj-rS9PBJBY5pc-unsplash-medium.jpg");
+		background-position: 10% 35%;
+		height: 1000px;
+	}
+}
+
+
+@media screen and (min-width: 900px) {
 	#logo {
 		font-size: 3em;
 	}
@@ -132,22 +181,12 @@ content > #c {
 		margin: 0 0.5em;
 	}
 
-	#showcase {
-		height: 400px;
-		color: black;
-	}
-
 	#showcase > img {
 		margin: -300px 0 0;
 	}
-
 }
 
 @media screen and (min-width: 1200px) {
-	#showcase {
-		height: 600px;
-	}
-
 	#showcase > img {
 		margin: -500px 0 0;
 	}
