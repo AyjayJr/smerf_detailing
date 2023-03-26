@@ -1,0 +1,38 @@
+/* Box-sizing fix */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#logo {
+	font-size: 6vw;
+}
+
+nav {
+}
+
+
+ul {
+	margin: 1em;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 700px) {
+	#logo {
+		font-size: 3em;
+	}
+}
+
