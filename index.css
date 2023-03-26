@@ -1,11 +1,12 @@
 /* variables */
+
 :root {
 	--red: #e63946;
 	--dark-blue: #1d3557;
 }
 
-
 /* Box-sizing fix */
+
 html {
 	box-sizing: border-box;
 }
@@ -14,11 +15,16 @@ html {
 	box-sizing: inherit;
 }
 
+/* global styles */
+
 html, body {
 	margin: 0;
 	height: 100%;
 	width: 100%;
+	font-family: 'Open sans', sans-serif;
 }
+
+/* header styles */
 
 #logo {
 	font-size: 6vw;
@@ -41,10 +47,6 @@ header {
 	max-width: 1200px;
 }
 
-nav {
-}
-
-
 ul {
 	margin: 1em;
 	list-style: none;
@@ -54,11 +56,28 @@ ul {
 }
 
 nav > ul > li {
-	font-size: 3vw;
+	font-size: 2.5vw;
 	margin: 0 0.5em;
 }
 
-@media screen and (min-width: 700px) {
+/* showcase content */
+
+#showcase {
+	height: 300px;
+	overflow: hidden;
+}
+
+#showcase > img {
+	max-width: 100%;
+	margin: -75px 0;
+}
+
+
+
+
+
+/* responsive layout */
+@media screen and (min-width: 800px) {
 	#logo {
 		font-size: 3em;
 	}
@@ -66,5 +85,24 @@ nav > ul > li {
 	nav > ul > li {
 		font-size: 1.5em;
 		margin: 0 0.5em;
+	}
+
+	#showcase {
+		height: 400px;
+		color: white;
+	}
+
+	#showcase > img {
+		margin: -300px 0 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#showcase {
+		height: 600px;
+	}
+
+	#showcase > img {
+		margin: -500px 0 0;
 	}
 }
