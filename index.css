@@ -27,8 +27,6 @@ html, body {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 }
 
 /* header styles */
@@ -90,14 +88,13 @@ nav > ul > li {
 #showcase {
 	background-image: url("./img/neelabh-raj-rS9PBJBY5pc-unsplash-small.jpg");
 	background-position: center 30%;
-	height: 600px;
-	flex-grow: 1;
 	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	height: 500px;
 }
 
 #showcase > img {
@@ -109,6 +106,7 @@ nav > ul > li {
 #showcase > h1 {
 	font-size: 4em;
 	margin-bottom: 0; 
+	max-width: 700px;
 	text-shadow:
 			0.05em 0 black,
 			0 0.05em black,
@@ -144,33 +142,30 @@ main {
 }
 
 main > #a {
-	flex-grow: 0.5;
-	height: 500px;
+	flex-grow: 1;
 	background-color: var(--light-blue);
 }
 
 main > #b {
-	flex-grow: 0.5;
-	height: 500px;
+	flex-grow: 1;
 	background-color: var(--medium-blue);
 }
 
 main > #c {
-	flex-grow: 0.5;
-	height: 500px;
+	flex-grow: 1;
 	background-color: var(--dark-blue);
 }
 
 content {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
 	max-width: 800px;
 	height: 100%;
 	text-align: center;
 	font-weight: bold;
-	font-size
 }
 
 #email {
@@ -185,7 +180,6 @@ content {
 	#showcase {
 		background-image: url("/img/neelabh-raj-rS9PBJBY5pc-unsplash-medium.jpg");
 		background-position: 10% 35%;
-		height: 1000px;
 	}
 }
 
@@ -204,9 +198,6 @@ content {
 		margin: -300px 0 0;
 	}
 
-	main {
-		flex-direction: row;
-	}
 }
 
 @media screen and (min-width: 1200px) {
