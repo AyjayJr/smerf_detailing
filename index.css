@@ -2,6 +2,8 @@
 
 :root {
 	--red: #e63946;
+	--light-blue: #a8dadc;
+	--medium-blue: #457b9d;
 	--dark-blue: #1d3557;
 }
 
@@ -31,9 +33,13 @@ html, body {
 	text-align: center;
 }
 
+#logo > span {
+	color: white;
+}
+
 #header-bg {
 	width: 100%;
-	color: white;
+	color: black;
 	background-color: var(--red);
 }
 
@@ -70,10 +76,49 @@ nav > ul > li {
 #showcase > img {
 	max-width: 100%;
 	margin: -75px 0;
+	z-index: -1000;
+	overflow: hidden;
 }
 
+#showcase > div {
+	top: 10%;
+	width: 100%;
+	text-align: center;
+	font-size: 8vw;
+	position: absolute;
+	color: white;
+}
 
+#showcase > div > h1 {
+	margin-bottom: 0; 
+}
 
+#showcase > div > p {
+	font-size: 4vw;
+}
+
+/* main content */
+
+content {
+	display: flex;
+	flex-direction: column;
+	height: 58%;
+}
+
+content > #a {
+	flex-grow: 1;
+	background-color: var(--light-blue);
+}
+
+content > #b {
+	flex-grow: 1;
+	background-color: var(--medium-blue);
+}
+
+content > #c {
+	flex-grow: 1;
+	background-color: var(--dark-blue);
+}
 
 
 /* responsive layout */
@@ -89,12 +134,13 @@ nav > ul > li {
 
 	#showcase {
 		height: 400px;
-		color: white;
+		color: black;
 	}
 
 	#showcase > img {
 		margin: -300px 0 0;
 	}
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -105,4 +151,9 @@ nav > ul > li {
 	#showcase > img {
 		margin: -500px 0 0;
 	}
+
+	#showcase > div > h1 {
+		font-size: 7vw;
+	}
+
 }
